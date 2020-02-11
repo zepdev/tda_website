@@ -1,0 +1,43 @@
+{
+  "overview": {
+    "vision": "vision",
+    "visionText": "Do you have a problem that you think should have a digital solution? Our team can help! We can help you build mathematical models and help you transform your data into something useful whether that is an app, a dashboard, or a web product. We will work with you in house to provide Proof of Concepts and MVPs and after that we provide support.",
+    "bullet1": "Project Owners guide you through the process of working with us",
+    "bullet2": "Data Scientists and Engineers help support, teach and develop",
+    "bullet3": "Work with us in 3 ways; Analytics+, Use Cases, FleetX"
+  },
+  "header": {
+    "what": "What can we do for you",
+    "how": "Work With Us",
+    "who": "who we are"
+  },
+  "analytics": {
+    "overview": "With Analytics + we want to build interdisciplinary teams in the SBUs and work together with them on data-driven use cases in order to form a Zeppelin-wide network of experts for data analytics. Come work with our team for 3 months to learn our technologies and methods. Together we will complete a small proof of concept or minimum viable product to solve a specific problem in your department. After working with us, you go back to your SBU and will take care of SBU-specific use cases on your own data team. Of course, as a team we continue to support you in the implementation of the use cases, but with the aim of making the new data team more independent in the long term.",
+    "tagline": "Create an unbeatable network with us"
+  },
+  "fleetx": {
+    "overview": "We start with the idea of providing the first real cross-manufacturer telematics and asset management solution for our customers. Our colleagues in the various SBUs are experts in dealing with construction machinery, engines, construction logistics and service related to the construction industry. We have what it takes to build data-driven products for our customers.",
+    "tagline": "Asset management solution of the future"
+  },
+  "usecase": {
+    "overview": "We are working to further advanced analytics at Zeppelin. Do you have a problem that needs a digital solution? Do you want to optimize your current processes using data driven decisions? Submit a use case to us and our team will work to provide a data driven solution.",
+    "tagline": "Data driven solutions"
+  },
+  "process": {
+    "name": "get involved",
+    "tagline": "Our Process",
+    "text": "If you have data and a problem that you think needs a data driven solution, work with us! No matter which domain your project fits under (FleetX, Analytics+, or a Use Case), the process of working with us is similar and we will work together with you every step of the way.",
+    "setup": "setup",
+    "pilot": "pilot",
+    "prototype": "prototype",
+    "support": "support",
+    "step1": "Bring us a problem and we will work with you to brainstorm and roadmap possible solutions.",
+    "step2": "Work together with technical experts to test the feasibility of your solution and build a prototype for stakeholders.",
+    "step3": "Work in sprints to complete a final solution; An MVP app, website, model or dashboard.",
+    "step4": "Bring your solution back to your SBU and implement it! We will continue to support you in the integration of your solution or development of your solution to a real product."
+  },
+  "contact": {
+    "text": "We as Zeppelins have great potential in the house! Let's share and discuss how we can use data analytics to drive digital solutions for Zeppelin.",
+    "button": "contact us"
+  }
+}
