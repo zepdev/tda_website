@@ -66,7 +66,7 @@ function App() {
   const classes = useStyles();
   const { i18n, t } = useTranslation();
   const [lang, setLang] = useState("en");
-  const [loggedIn, setLogin] = useState(true);
+  const [loggedIn, setLogin] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
