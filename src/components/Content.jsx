@@ -4,6 +4,7 @@ import Overview from "./Overview";
 import Team from "./Team";
 import Process from "./Process";
 import Departments from "./Departments";
+import PastCases from "./PastCases";
 
 const useStyles = createUseStyles(theme => ({
   root: {
@@ -19,6 +20,7 @@ function Content({ ...props }) {
       <Overview />
       <Departments />
       <Process />
+      <PastCases />
       <Team />
     </div>
   );

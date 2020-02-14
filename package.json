@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.2",
     "@reach/tooltip": "^0.8.0",
     "@zlab-de/zel-react": "^1.0.14",
     "@zlab-de/zel-react-icons": "^0.1.2",

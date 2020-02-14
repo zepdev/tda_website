@@ -17,12 +17,11 @@ const useStyles = createUseStyles(theme => ({
     textTransform: "uppercase"
   },
   logo: {
-    color: theme.color.gray.white.hex,
+    color: theme.color.gray.black.hex,
     width: 100
   },
   [`@media (min-width: ${theme.breakpoint.xs})`]: {
     logo: {
-      color: theme.color.gray.white.hex,
       width: 150
     }
   }

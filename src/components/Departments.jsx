@@ -2,9 +2,9 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
-import build1 from "../assets/build1.png";
-import build2 from "../assets/build2.png";
-import build3 from "../assets/build3.png";
+import build1 from "../assets/build4.png";
+import build2 from "../assets/build5.png";
+import build3 from "../assets/build6.png";
 
 const useStyles = createUseStyles(theme => ({
   container: {
@@ -26,10 +26,13 @@ const useStyles = createUseStyles(theme => ({
   imgContainer: {
     flexBasis: "55%",
     height: 500,
-    overflow: "hidden"
+    overflow: "hidden",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
   },
   img: {
-    width: "100%"
+    height: "50%"
   },
   flex: {
     flexBasis: "40%",

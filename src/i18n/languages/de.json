@@ -38,6 +38,30 @@
   },
   "contact": {
     "text": "Wir als Zeppeline haben großes Potenzial im Haus! Lassen Sie uns mitteilen und diskutieren, wie wir mithilfe der Datenanalyse digitale Lösungen für Zeppelin entwickeln können.",
-    "button": "kontaktiere uns"
+    "button": "kontaktiere uns",
+    "send": "senden",
+    "name": "name",
+    "email": "email",
+    "message": "nachricht"
+  },
+  "problem": "problem",
+  "solution": "Lösung",
+  "oillab": {
+    "type": "Use Case: ZBM",
+    "title": "Ollabor",
+    "problem": "problem",
+    "solution": "solution"
+  },
+  "transver": {
+    "type": "Analytics+: Rental",
+    "title": "TransVER",
+    "problem": "problem",
+    "solution": "solution"
+  },
+  "sparkplugs": {
+    "type": "Use Case: ZPS",
+    "title": "Sparkplugs",
+    "problem": "problem",
+    "solution": "solution"
   }
 }

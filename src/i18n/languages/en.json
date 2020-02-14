@@ -38,6 +38,30 @@
   },
   "contact": {
     "text": "We as Zeppelins have great potential in the house! Let's share and discuss how we can use data analytics to drive digital solutions for Zeppelin.",
-    "button": "contact us"
+    "button": "contact us",
+    "send": "send",
+    "name": "name",
+    "email": "email",
+    "message": "message"
+  },
+  "problem": "problem",
+  "solution": "solution",
+  "oillab": {
+    "type": "Use Case: ZBM",
+    "title": "Oil Lab",
+    "problem": "problem",
+    "solution": "solution"
+  },
+  "transver": {
+    "type": "Analytics+: Rental",
+    "title": "TransVER",
+    "problem": "problem",
+    "solution": "solution"
+  },
+  "sparkplugs": {
+    "type": "Use Case: ZPS",
+    "title": "Sparkplugs",
+    "problem": "problem",
+    "solution": "solution"
   }
 }
