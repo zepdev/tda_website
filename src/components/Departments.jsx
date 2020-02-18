@@ -5,6 +5,8 @@ import clsx from "clsx";
 import build1 from "../assets/build4.png";
 import build2 from "../assets/build5.png";
 import build3 from "../assets/build6.png";
+import Container from "./Container";
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = createUseStyles(theme => ({
   container: {
@@ -35,7 +37,7 @@ const useStyles = createUseStyles(theme => ({
     height: "50%"
   },
   flex: {
-    flexBasis: "40%",
+    flexBasis: "100%",
     marginBottom: `${theme.spacing.component.xl.rem}rem`
   },
   name: {
@@ -83,10 +85,12 @@ const useStyles = createUseStyles(theme => ({
       paddingRight: 90
     },
     imgContainer: {
-      flexBasis: "55%"
+      // flexBasis: "55%"
+      flexBasis: "40%"
     },
     flex: {
-      flexBasis: "40%"
+      // flexBasis: "40%"
+      flexBasis: "55%"
     }
   },
   [`@media (min-width: ${theme.breakpoint.xl})`]: {
@@ -105,10 +109,12 @@ function Overview({ ...props }) {
 
   return (
     <>
-      <div className={clsx(classes.container, classes.background)}>
-        <div className={classes.imgContainer}>
-          <img src={build1} alt="builders 1" className={classes.img} />
-        </div>
+      <Container variant="spaceBetween">
+        <Hidden smDown>
+          <div className={classes.imgContainer}>
+            <img src={build1} alt="builders 1" className={classes.img} />
+          </div>
+        </Hidden>
         <div className={classes.flex}>
           <p className={clsx(classes.name, "zep-typo--display-6")}>
             Analytics+
@@ -118,10 +124,8 @@ function Overview({ ...props }) {
           </p>
           <p className="zep-typo--normal-body1">{t("analytics.overview")}</p>
         </div>
-      </div>
-      <div
-        className={clsx(classes.container, classes.background, classes.reverse)}
-      >
+      </Container>
+      <Container variant="spaceBetween">
         <div className={classes.flex}>
           <h2 className={clsx(classes.name, "zep-typo--display-6")}>
             Use Cases
@@ -131,14 +135,18 @@ function Overview({ ...props }) {
           </p>
           <p className="zep-typo--normal-body1">{t("usecase.overview")}</p>
         </div>
-        <div className={classes.imgContainer}>
-          <img src={build2} alt="builders 2" className={classes.img} />
-        </div>
-      </div>
-      <div className={clsx(classes.container, classes.background)}>
-        <div className={classes.imgContainer}>
-          <img src={build3} alt="builders 3" className={classes.img} />
-        </div>
+        <Hidden smDown>
+          <div className={classes.imgContainer}>
+            <img src={build2} alt="builders 2" className={classes.img} />
+          </div>
+        </Hidden>
+      </Container>
+      <Container variant="spaceBetween">
+        <Hidden smDown>
+          <div className={classes.imgContainer}>
+            <img src={build3} alt="builders 3" className={classes.img} />
+          </div>
+        </Hidden>
         <div className={classes.flex}>
           <h2 className={clsx(classes.name, "zep-typo--display-6")}>FleetX</h2>
           <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
@@ -146,9 +154,55 @@ function Overview({ ...props }) {
           </p>
           <p className="zep-typo--normal-body1">{t("fleetx.overview")}</p>
         </div>
-      </div>
+      </Container>
     </>
   );
 }
 
 export default Overview;
+
+{
+  //FOR BIG PICS IN FUTURE
+  /* <div className={clsx(classes.container, classes.background)}>
+<div className={classes.imgContainer}>
+  <img src={build1} alt="builders 1" className={classes.img} />
+</div>
+<div className={classes.flex}>
+  <p className={clsx(classes.name, "zep-typo--display-6")}>
+    Analytics+
+  </p>
+  <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
+    {t("analytics.tagline")}
+  </p>
+  <p className="zep-typo--normal-body1">{t("analytics.overview")}</p>
+</div>
+</div>
+<div
+className={clsx(classes.container, classes.background, classes.reverse)}
+>
+<div className={classes.flex}>
+  <h2 className={clsx(classes.name, "zep-typo--display-6")}>
+    Use Cases
+  </h2>
+  <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
+    {t("usecase.tagline")}
+  </p>
+  <p className="zep-typo--normal-body1">{t("usecase.overview")}</p>
+</div>
+<div className={classes.imgContainer}>
+  <img src={build2} alt="builders 2" className={classes.img} />
+</div>
+</div>
+<div className={clsx(classes.container, classes.background)}>
+<div className={classes.imgContainer}>
+  <img src={build3} alt="builders 3" className={classes.img} />
+</div>
+<div className={classes.flex}>
+  <h2 className={clsx(classes.name, "zep-typo--display-6")}>FleetX</h2>
+  <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
+    {t("fleetx.tagline")}
+  </p>
+  <p className="zep-typo--normal-body1">{t("fleetx.overview")}</p>
+</div>
+</div> */
+}

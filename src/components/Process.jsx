@@ -68,7 +68,11 @@ function Process({ ...props }) {
   ];
 
   return (
-    <Container variant="spaceBetween" title={t("header.how")}>
+    <Container
+      variant="spaceBetween"
+      title={t("header.how")}
+      background="secondary"
+    >
       <div className={classes.flex}>
         <p className={clsx(classes.name, "zep-typo--display-6")}>
           {t("process.name")}

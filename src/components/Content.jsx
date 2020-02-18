@@ -18,8 +18,8 @@ function Content({ ...props }) {
   return (
     <div className={classes.root}>
       <Overview />
-      <Departments />
       <Process />
+      <Departments />
       <PastCases />
       <Team />
     </div>
