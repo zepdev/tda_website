@@ -23,3 +23,7 @@
 svg {
   width: 100%;
 }
+
+.apexcharts-legend-marker {
+  margin-right: 10px !important;
+}

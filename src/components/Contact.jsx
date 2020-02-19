@@ -18,7 +18,10 @@ const useStyles = createUseStyles(theme => ({
   button: {
     padding: `${theme.spacing.component.xl.rem}rem`,
     background: theme.logo.digitBlue.hex,
-    color: theme.color.gray.white.hex
+    color: theme.color.gray.white.hex,
+    "&:hover": {
+      background: "#3b89ff"
+    }
   },
   form: {
     padding: `${theme.spacing.component.l.rem}rem`

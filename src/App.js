@@ -6,7 +6,6 @@ import Content from "./components/Content";
 import { useTranslation } from "react-i18next";
 import background from "./assets/background.png";
 import logo from "./assets/fullLogo.png";
-import oldLogo from "./assets/oldLogo.png";
 import Button from "@zlab-de/zel-react/Button";
 import Input from "@zlab-de/zel-react/Input";
 import clsx from "clsx";
@@ -101,10 +100,7 @@ function App() {
           alt="geometric print background"
         />
         <div className={classes.container}>
-          <img
-            src={process.env.NODE_ENV !== "development" ? logo : oldLogo}
-            alt="logo"
-          />
+          <img src={logo} alt="logo" />
         </div>
       </div>
       <div className={classes.body}>

@@ -103,6 +103,7 @@ function Overview({ ...props }) {
       fontFamily: "Roboto",
       offsetY: 75,
       fontSize: 16,
+      offsetX: 15,
       markers: {
         radius: 2
       },

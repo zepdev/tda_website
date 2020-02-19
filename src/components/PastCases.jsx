@@ -3,10 +3,8 @@ import { createUseStyles } from "react-jss";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import Container from "./Container";
-import MobileStepper from "@material-ui/core/MobileStepper";
-import ZepiconsChevronRight from "@zlab-de/zel-react-icons/ZepiconsChevronRight";
-import ZepiconsChevronLeft from "@zlab-de/zel-react-icons/ZepiconsChevronLeft";
-import IconButton from "@zlab-de/zel-react/IconButton";
+import Tabs from "@zlab-de/zel-react/Tabs";
+import Tab from "@zlab-de/zel-react/Tab";
 
 const useStyles = createUseStyles(theme => ({
   name: {
@@ -24,68 +22,57 @@ const useStyles = createUseStyles(theme => ({
   },
   margin: {
     marginBottom: `${theme.spacing.component.s.rem}rem`
+  },
+  tab: {
+    "&:hover": { borderBottomColor: theme.logo.digitBlue.hex }
+  },
+  tabSelected: {
+    borderBottomColor: theme.logo.digitBlue.hex
+  },
+  paper: {
+    padding: `${theme.spacing.component.xl.rem * 2}rem`,
+    background: theme.color.gray.white.hex
   }
 }));
 
 function PastCases({ ...props }) {
   const classes = useStyles(props);
   const { t } = useTranslation();
-  const [activeStep, setActiveStep] = useState(0);
-
-  const handleNext = () => {
-    setActiveStep(prevActiveStep => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep(prevActiveStep => prevActiveStep - 1);
-  };
+  const [value, setValue] = useState(0);
+  function handleChange(newValue) {
+    setValue(newValue);
+  }
 
   const cases = ["oillab", "sparkplugs", "transver"];
 
   return (
     <Container background="secondary" title="Use Cases">
-      <div>
+      <Tabs value={value} onClick={handleChange}>
+        {cases.map((elem, idx) => (
+          <Tab
+            label={elem}
+            className={clsx(classes.tab, {
+              [classes.tabSelected]: value === idx
+            })}
+          />
+        ))}
+      </Tabs>
+      <div className={classes.paper}>
         <h2 className={clsx(classes.name, "zep-typo--display-6")}>
-          {t(`${cases[activeStep]}.type`)}
+          {t(`${cases[value]}.type`)}
         </h2>
         <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
-          {t(`${cases[activeStep]}.title`)}
+          {t(`${cases[value]}.title`)}
         </p>
         <p className={classes.bold}>{t("problem")}</p>
         <p className={clsx(classes.margin, "zep-typo--normal-body1")}>
-          {t(`${cases[activeStep]}.problem`)}
+          {t(`${cases[value]}.problem`)}
         </p>
         <p className={classes.bold}>{t("solution")}</p>
         <p className="zep-typo--normal-body1">
-          {t(`${cases[activeStep]}.solution`)}
+          {t(`${cases[value]}.solution`)}
         </p>
       </div>
-
-      <MobileStepper
-        variant="dots"
-        steps={3}
-        position="static"
-        activeStep={activeStep}
-        style={{ background: "transparent" }}
-        nextButton={
-          <IconButton
-            size="small"
-            onClick={handleNext}
-            disabled={activeStep === 2}
-          >
-            <ZepiconsChevronRight />
-          </IconButton>
-        }
-        backButton={
-          <IconButton
-            size="small"
-            onClick={handleBack}
-            disabled={activeStep === 0}
-          >
-            <ZepiconsChevronLeft />
-          </IconButton>
-        }
-      />
     </Container>
   );
 }
