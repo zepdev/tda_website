@@ -28,7 +28,7 @@ const useStyles = createUseStyles(theme => ({
   },
   top: {
     position: "relative",
-    height: 270
+    height: "100vh - 80"
   },
   img: {
     zIndex: -5,
@@ -36,28 +36,14 @@ const useStyles = createUseStyles(theme => ({
     top: 0,
     width: "100%",
     objectFit: "cover",
-    height: 350,
+    height: "100vh",
     marginTop: -80
   },
   [`@media (min-width: ${theme.breakpoint.m})`]: {
-    top: {
-      height: 620
-    },
-    img: {
-      height: 700
-    },
     container: {
       top: "55%",
       left: "65%",
       transform: "translate(-55%, -65%)"
-    }
-  },
-  [`@media (min-width: ${theme.breakpoint.xl})`]: {
-    top: {
-      height: 720
-    },
-    img: {
-      height: 800
     }
   }
 }));

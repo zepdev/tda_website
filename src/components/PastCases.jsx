@@ -51,6 +51,8 @@ function PastCases({ ...props }) {
         {cases.map((elem, idx) => (
           <Tab
             label={elem}
+            ariaLabel={`tab${idx}`}
+            key={`tab${idx}`}
             className={clsx(classes.tab, {
               [classes.tabSelected]: value === idx
             })}
