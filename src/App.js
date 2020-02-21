@@ -1,79 +1,132 @@
-import React, { useState } from "react";
-import { createUseStyles } from "react-jss";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Content from "./components/Content";
-import { useTranslation } from "react-i18next";
-import background from "./assets/background.png";
-import logo from "./assets/fullLogo.png";
-import Button from "@zlab-de/zel-react/Button";
-import Input from "@zlab-de/zel-react/Input";
-import clsx from "clsx";
+import React, { useState, useEffect, useRef } from 'react';
+import { createUseStyles } from 'react-jss';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Content from './components/Content';
+import { Link, animateScroll as scroll, Element } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
+import background from './assets/background.png';
+import logo from './assets/fullLogo.png';
+import ArrowDown from './components/icons/ArrowDown';
+import IconButton from '@zlab-de/zel-react/IconButton';
+import clsx from 'clsx';
 
 const useStyles = createUseStyles(theme => ({
   root: {
-    display: "flex",
-    flexDirection: "column",
+    display: 'flex',
+    flexDirection: 'column',
     background: theme.color.gray.white.hex,
-    minHeight: "100%"
+    minHeight: '100%'
   },
   body: {
     flex: 1
   },
   container: {
-    position: "absolute",
-    top: "25%",
-    left: "30%",
-    transform: "translate(-25%, -30%)"
+    position: 'absolute',
+    top: '25%',
+    left: '30%',
+    transform: 'translate(-25%, -30%)'
   },
   top: {
-    position: "relative",
-    height: "100vh - 80"
+    position: 'relative',
+    height: '100vh - 80'
   },
   img: {
     zIndex: -5,
     left: 0,
     top: 0,
-    width: "100%",
-    objectFit: "cover",
-    height: "100vh",
+    width: '100%',
+    objectFit: 'cover',
+    height: '100vh',
     marginTop: -80
+  },
+  iconButton: {
+    background: 'transparent',
+    '&:hover': {
+      background: 'transparent'
+    },
+    '&:active': {
+      background: 'transparent'
+    },
+    '&:focus': {
+      background: 'transparent'
+    }
+  },
+  iconButtonDown: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    marginRight: `${theme.spacing.component.xl.rem * 2}rem`,
+    marginBottom: `${theme.spacing.component.xl.rem}rem`
+  },
+  iconButtonUp: {
+    position: 'fixed',
+    bottom: 0,
+    right: 0,
+    marginRight: `${theme.spacing.component.xl.rem * 2}rem`,
+    marginBottom: `${theme.spacing.component.xl.rem * 2}rem`
+  },
+  hidden: {
+    display: 'none'
+  },
+  icon: {
+    color: theme.color.gray.black.hex,
+    width: 42,
+    height: 42,
+    '&:hover': {
+      color: theme.logo.digitBlue.hex
+    }
+  },
+  iconUp: {
+    transform: 'rotate(180deg)'
   },
   [`@media (min-width: ${theme.breakpoint.m})`]: {
     container: {
-      top: "55%",
-      left: "65%",
-      transform: "translate(-55%, -65%)"
+      top: '55%',
+      left: '65%',
+      transform: 'translate(-55%, -65%)'
     }
   }
 }));
 
+const useHideOnScroll = () => {
+  const prevScrollY = useRef();
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsHidden(isHidden => {
+        const scrolledDown = window.scrollY < 300;
+        if (scrolledDown && !isHidden) {
+          return true;
+        } else if (!scrolledDown && isHidden) {
+          return false;
+        } else {
+          prevScrollY.current = window.scrollY;
+          return isHidden;
+        }
+      });
+    };
+
+    window.addEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
+  return isHidden;
+};
+
 function App() {
   const classes = useStyles();
   const { i18n, t } = useTranslation();
-  const [lang, setLang] = useState("en");
-  const [loggedIn, setLogin] = useState(
-    process.env.NODE_ENV === "development" ? true : true
-  );
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
+  const [lang, setLang] = useState('en');
+  const isHidden = useHideOnScroll();
 
   const handleSetLang = () => {
-    let language = lang === "en" ? "de" : "en";
+    let language = lang === 'en' ? 'de' : 'en';
     i18n.changeLanguage(language);
     setLang(language);
-  };
-
-  const handleLogin = value => {
-    if (
-      password === process.env.REACT_APP_PASSWORD &&
-      username === process.env.REACT_APP_USERNAME
-    ) {
-      setLogin(true);
-    } else {
-      setError(true);
-    }
   };
 
   return (
@@ -88,44 +141,28 @@ function App() {
         <div className={classes.container}>
           <img src={logo} alt="logo" />
         </div>
+        <Link to="section1" smooth={true} offset={0} duration={1000}>
+          <IconButton
+            className={clsx(classes.iconButton, classes.iconButtonDown)}
+          >
+            <ArrowDown alt="arrow down" className={classes.icon} />
+          </IconButton>
+        </Link>
       </div>
       <div className={classes.body}>
-        {loggedIn ? (
-          <Content />
-        ) : (
-          <div className={classes.loginContainer}>
-            <div className={classes.login}>
-              <h1 className={clsx(classes.loginHeader, "zep-typo--display-5")}>
-                {t("user.login")}
-              </h1>
-              <form noValidate autoComplete="off">
-                <div className={classes.inputContainer}>
-                  <Input
-                    id="username"
-                    label={t("form.username")}
-                    value={username}
-                    onChange={e => setUsername(e.target.value)}
-                    required
-                    error={error}
-                  />
-                </div>
-                <div className={classes.inputContainer}>
-                  <Input
-                    id="password"
-                    label={t("form.password")}
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
-                    required
-                    error={error}
-                  />
-                </div>
-              </form>
-              <Button variant="primary" fullWidth onClick={handleLogin}>
-                {t("form.submit")}
-              </Button>
-            </div>
-          </div>
-        )}
+        <Element name="section1"></Element>
+        <Content />
+        <IconButton
+          className={clsx(classes.iconButton, classes.iconButtonUp, {
+            [classes.hidden]: isHidden
+          })}
+          onClick={() => scroll.scrollToTop({ duration: 1500, smooth: true })}
+        >
+          <ArrowDown
+            alt="arrow down"
+            className={clsx(classes.icon, classes.iconUp)}
+          />
+        </IconButton>
       </div>
       <Footer />
     </div>

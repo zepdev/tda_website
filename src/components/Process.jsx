@@ -1,13 +1,13 @@
-import React from "react";
-import { createUseStyles } from "react-jss";
-import { useTranslation } from "react-i18next";
-import clsx from "clsx";
-import Container from "./Container";
-import Contact from "./Contact";
+import React from 'react';
+import { createUseStyles } from 'react-jss';
+import { useTranslation } from 'react-i18next';
+import clsx from 'clsx';
+import Container from './Container';
+import Contact from './Contact';
 
 const useStyles = createUseStyles(theme => ({
   flex: {
-    flexBasis: "100%",
+    flexBasis: '100%',
     marginBottom: `${theme.spacing.component.xl.rem}rem`
   },
   name: {
@@ -19,12 +19,12 @@ const useStyles = createUseStyles(theme => ({
     marginBottom: `${theme.spacing.component.xl.rem}rem`
   },
   stepsContainer: {
-    flexBasis: "100%",
-    display: "flex",
-    flexWrap: "wrap"
+    flexBasis: '100%',
+    display: 'flex',
+    flexWrap: 'wrap'
   },
   stepsItem: {
-    flexBasis: "49%",
+    flexBasis: '49%',
     marginBottom: `${theme.spacing.component.xl.rem * 2}rem`
   },
   stepsText: {
@@ -32,8 +32,8 @@ const useStyles = createUseStyles(theme => ({
     paddingLeft: 45
   },
   numberContainer: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
     marginBottom: `${theme.spacing.component.s.rem}rem`
   },
   number: {
@@ -42,17 +42,17 @@ const useStyles = createUseStyles(theme => ({
     width: 30,
     height: 30,
     padding: 7,
-    textAlign: "center",
-    borderRadius: "50%",
+    textAlign: 'center',
+    borderRadius: '50%',
     marginRight: `${theme.spacing.component.m.rem}rem`
   },
   [`@media (min-width: ${theme.breakpoint.m})`]: {
     flex: {
-      flexBasis: "45%",
+      flexBasis: '45%',
       marginBottom: 0
     },
     stepsContainer: {
-      flexBasis: "49%"
+      flexBasis: '49%'
     }
   }
 }));
@@ -61,27 +61,28 @@ function Process({ ...props }) {
   const classes = useStyles(props);
   const { t } = useTranslation();
   const steps = [
-    t("process.setup"),
-    t("process.prototype"),
-    t("process.pilot"),
-    t("process.support")
+    t('process.setup'),
+    t('process.prototype'),
+    t('process.pilot'),
+    t('process.support')
   ];
 
   return (
     <Container
       variant="spaceBetween"
-      title={t("header.how")}
+      title={t('header.how')}
       background="secondary"
     >
       <div className={classes.flex}>
-        <p className={clsx(classes.name, "zep-typo--display-6")}>
-          {t("process.name")}
+        <p className={clsx(classes.name, 'zep-typo--display-6')}>
+          {t('process.name')}
         </p>
-        <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
-          {t("process.tagline")}
+
+        <p className={clsx(classes.tagline, 'zep-typo--bold-h2')}>
+          {t('process.tagline')}
         </p>
-        <p className={clsx(classes.text, "zep-typo--normal-body1")}>
-          {t("process.text")}
+        <p className={clsx(classes.text, 'zep-typo--normal-body1')}>
+          {t('process.text')}
         </p>
       </div>
       <div className={classes.stepsContainer}>
@@ -89,11 +90,11 @@ function Process({ ...props }) {
           <div className={classes.stepsItem} key={`step${idx}`}>
             <div className={classes.numberContainer}>
               <p className={classes.number}>{idx + 1}</p>
-              <p className={(clsx(classes.title), "zep-typo--display-6")}>
+              <p className={(clsx(classes.title), 'zep-typo--display-6')}>
                 {elem}
               </p>
             </div>
-            <p className={clsx(classes.stepsText, "zep-typo--normal-caption")}>
+            <p className={clsx(classes.stepsText, 'zep-typo--normal-caption')}>
               {t(`process.step${idx + 1}`)}
             </p>
           </div>
