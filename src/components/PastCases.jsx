@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { createUseStyles } from "react-jss";
-import { useTranslation } from "react-i18next";
-import clsx from "clsx";
-import Container from "./Container";
-import Tabs from "@zlab-de/zel-react/Tabs";
-import Tab from "@zlab-de/zel-react/Tab";
+import React, { useState } from 'react';
+import { createUseStyles } from 'react-jss';
+import { useTranslation } from 'react-i18next';
+import clsx from 'clsx';
+import Container from './Container';
+import Tabs from '@zlab-de/zel-react/Tabs';
+import Tab from '@zlab-de/zel-react/Tab';
 
 const useStyles = createUseStyles(theme => ({
   name: {
@@ -16,15 +16,15 @@ const useStyles = createUseStyles(theme => ({
     marginBottom: `${theme.spacing.component.xl.rem}rem`
   },
   bold: {
-    fontWeight: "bold",
-    textTransform: "uppercase",
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
     marginBottom: `${theme.spacing.component.s.rem}rem`
   },
   margin: {
     marginBottom: `${theme.spacing.component.s.rem}rem`
   },
   tab: {
-    "&:hover": { borderBottomColor: theme.logo.digitBlue.hex }
+    '&:hover': { borderBottomColor: theme.logo.digitBlue.hex }
   },
   tabSelected: {
     borderBottomColor: theme.logo.digitBlue.hex
@@ -43,7 +43,7 @@ function PastCases({ ...props }) {
     setValue(newValue);
   }
 
-  const cases = ["oillab", "sparkplugs", "transver"];
+  const cases = ['transver', 'oillab', 'sparkplugs'];
 
   return (
     <Container background="secondary" title="Use Cases">
@@ -60,17 +60,17 @@ function PastCases({ ...props }) {
         ))}
       </Tabs>
       <div className={classes.paper}>
-        <h2 className={clsx(classes.name, "zep-typo--display-6")}>
+        <h2 className={clsx(classes.name, 'zep-typo--display-6')}>
           {t(`${cases[value]}.type`)}
         </h2>
-        <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
+        <p className={clsx(classes.tagline, 'zep-typo--bold-h2')}>
           {t(`${cases[value]}.title`)}
         </p>
-        <p className={classes.bold}>{t("problem")}</p>
-        <p className={clsx(classes.margin, "zep-typo--normal-body1")}>
+        <p className={classes.bold}>{t('problem')}</p>
+        <p className={clsx(classes.margin, 'zep-typo--normal-body1')}>
           {t(`${cases[value]}.problem`)}
         </p>
-        <p className={classes.bold}>{t("solution")}</p>
+        <p className={classes.bold}>{t('solution')}</p>
         <p className="zep-typo--normal-body1">
           {t(`${cases[value]}.solution`)}
         </p>

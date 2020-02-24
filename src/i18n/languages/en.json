@@ -55,8 +55,8 @@
   "transver": {
     "type": "Analytics+: Rental",
     "title": "TransVER",
-    "problem": "problem",
-    "solution": "solution"
+    "problem": "The number of transports is too high. This results in both high external and internal costs.",
+    "solution": "We created an algorithm that can estimate the short term need of certain devices. Hence we don’t ship equipment which will be needed at this location within the following days. This way we can save money, time and reduce emissions."
   },
   "sparkplugs": {
     "type": "Use Case: ZPS",

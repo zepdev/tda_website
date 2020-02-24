@@ -55,8 +55,8 @@
   "transver": {
     "type": "Analytics+: Rental",
     "title": "TransVER",
-    "problem": "problem",
-    "solution": "solution"
+    "problem": "Die Anzahl der Transporte ist zu hoch. Dies führt zu hohen externen und internen Kosten.",
+    "solution": "Wir haben einen Algorithmus entwickelt, der den kurzfristigen Bedarf bestimmter Geräte abschätzen kann. Daher versenden wir keine Ausrüstung, die in den nächsten Tagen an diesem Standort benötigt wird. Auf diese Weise können wir Geld und Zeit sparen und Emissionen reduzieren. "
   },
   "sparkplugs": {
     "type": "Use Case: ZPS",
