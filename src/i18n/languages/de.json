@@ -49,8 +49,8 @@
   "oillab": {
     "type": "Use Case: ZBM",
     "title": "Ollabor",
-    "problem": "problem",
-    "solution": "solution"
+    "problem": "Im Zeppelin-Öllabor steigt die Anzahl der Ölproben, die von Technikern bewertet werden müssen. Dadurch wird die Arbeitsbelastung höher.",
+    "solution": "Wir haben einen Algorithmus entwickelt, der die Techniker beim Interpretieren der Ölproben unterstützt. In einem Dashboard wird übersichtlich dargestellt, wie der Algorithmus zu seiner Einschätzung kommt. Diese Lösung hilft den Technikern dabei, die hohen Qualitätsstandards zu halten und zu verbessern."
   },
   "transver": {
     "type": "Analytics+: Rental",
@@ -61,7 +61,7 @@
   "sparkplugs": {
     "type": "Use Case: ZPS",
     "title": "Sparkplugs",
-    "problem": "problem",
-    "solution": "solution"
+    "problem": "Wenn in einem Blockheizkraftwerk eine Zündkerze ausfällt, steht das gesamte Kraftwerk still. Dies führt zu vielen ungeplanten Serviceeinsätzen und ggf. hohen Standzeiten.",
+    "solution": "Wir haben einen Algorithmus entwickelt, der die Ausfälle von Zündkerzen frühzeitig vorhersagen kann. Das verbessert die Disposition von Servicemitarbeitern, erleichtert die Fehlerdiagnose und führt zu geringeren Motorstandzeiten."
   }
 }

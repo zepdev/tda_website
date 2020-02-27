@@ -49,8 +49,8 @@
   "oillab": {
     "type": "Use Case: ZBM",
     "title": "Oil Lab",
-    "problem": "problem",
-    "solution": "solution"
+    "problem": "In the Zeppelin oil laboratory, the number of oil samples that have to be assessed by technicians is increasing. This increases the workload.",
+    "solution": "We have developed an algorithm that helps technicians interpret the oil samples. A dashboard clearly shows how the algorithm comes to its assessment. This solution helps the technicians to maintain and improve the high quality standards."
   },
   "transver": {
     "type": "Analytics+: Rental",
@@ -61,7 +61,7 @@
   "sparkplugs": {
     "type": "Use Case: ZPS",
     "title": "Sparkplugs",
-    "problem": "problem",
-    "solution": "solution"
+    "problem": "If a spark plug fails in a combined heat and power plant, the entire power plant comes to a standstill. This leads to many unplanned service calls and possibly long downtimes.",
+    "solution": "We have developed an algorithm that can predict spark plug failures early. This improves the scheduling of service employees, simplifies fault diagnosis and leads to shorter engine downtimes."
   }
 }
