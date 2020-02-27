@@ -1,12 +1,13 @@
-import React from "react";
-import { createUseStyles } from "react-jss";
-import { useTranslation } from "react-i18next";
-import Chart from "react-apexcharts";
-import List from "@zlab-de/zel-react/List";
-import ListItem from "@zlab-de/zel-react/ListItem";
-import clsx from "clsx";
-import Container from "./Container";
-import guidelines from "@zlab-de/zel-react/guidelines.json";
+import React from 'react';
+import { createUseStyles } from 'react-jss';
+import { useTranslation } from 'react-i18next';
+import Chart from 'react-apexcharts';
+import List from '@zlab-de/zel-react/List';
+import ListItem from '@zlab-de/zel-react/ListItem';
+import clsx from 'clsx';
+import Container from './Container';
+import guidelines from '@zlab-de/zel-react/guidelines.json';
+import venn from '../assets/venn.png';
 
 const colors = [
   guidelines.logo.digitBlue.hex,
@@ -18,17 +19,17 @@ const colors = [
 
 const useStyles = createUseStyles(theme => ({
   container: {
-    alignItems: "center"
+    alignItems: 'center'
   },
   textContainer: {
-    flexBasis: "100%",
+    flexBasis: '100%',
     marginBottom: `${theme.spacing.component.xl.rem}rem`
   },
   imgContainerXS: {
-    flexBasis: "100%"
+    flexBasis: '100%'
   },
   imgContainerL: {
-    display: "none"
+    display: 'none'
   },
   name: {
     color: theme.logo.digitBlue.hex,
@@ -42,23 +43,29 @@ const useStyles = createUseStyles(theme => ({
     marginBottom: `${theme.spacing.component.m.rem}rem`
   },
   list: {
-    display: "flex",
-    justifyContent: "space-between"
+    display: 'flex',
+    justifyContent: 'space-between'
   },
   xs: {
-    display: "none"
+    display: 'none'
+  },
+  imgContainer: {
+    textAlign: 'center'
+  },
+  img: {
+    width: '60%'
   },
   [`@media (min-width: ${theme.breakpoint.l})`]: {
     textContainer: {
-      flexBasis: "49%",
+      flexBasis: '49%',
       mariginBottom: 0
     },
     imgContainerXS: {
-      display: "none"
+      display: 'none'
     },
     imgContainerL: {
-      flexBasis: "49%",
-      display: "block"
+      flexBasis: '49%',
+      display: 'block'
     }
   }
 }));
@@ -68,21 +75,21 @@ function Overview({ ...props }) {
   const { t } = useTranslation();
 
   const labels = [
-    "Advanced Analytics",
-    "Data Infrastructure",
-    "Road Mapping",
-    "Kickstarting",
-    "Brainstorming"
+    'Advanced Analytics',
+    'Data Infrastructure',
+    'Road Mapping',
+    'Kickstarting',
+    'Brainstorming'
   ];
 
   const optionsXS = {
     chart: {
-      id: "apexchart-pie"
+      id: 'apexchart-pie'
     },
     labels: labels,
     dataLabels: {
       enabled: true,
-      fontColor: "#000",
+      fontColor: '#000',
       formatter: function(val, opts) {
         return labels[opts.seriesIndex];
       },
@@ -90,7 +97,7 @@ function Overview({ ...props }) {
         enabled: false
       },
       style: {
-        colors: ["#000"]
+        colors: ['#000']
       }
     },
     tooltip: {
@@ -99,8 +106,8 @@ function Overview({ ...props }) {
     colors: colors,
     legend: {
       show: false,
-      position: "right",
-      fontFamily: "Roboto",
+      position: 'right',
+      fontFamily: 'Roboto',
       offsetY: 75,
       fontSize: 16,
       offsetX: 15,
@@ -115,7 +122,7 @@ function Overview({ ...props }) {
 
   const optionsL = {
     chart: {
-      id: "apexchart-pie"
+      id: 'apexchart-pie'
     },
     labels: labels,
     dataLabels: {
@@ -127,8 +134,8 @@ function Overview({ ...props }) {
     colors: colors,
     legend: {
       show: true,
-      position: "right",
-      fontFamily: "Roboto",
+      position: 'right',
+      fontFamily: 'Roboto',
       offsetY: 75,
       fontSize: 16,
       markers: {
@@ -142,29 +149,32 @@ function Overview({ ...props }) {
 
   return (
     <Container variant="spaceBetween" className={classes.container}>
-      <div className={classes.imgContainerL}>
-        <Chart
+      {/* <div className={classes.imgContainerL}>
+       = <Chart
           options={optionsL}
           series={[30, 17.5, 17.5, 17.5, 17.5]}
           type="pie"
           width="80%"
           height={250}
-        />
+        /> 
+        </div> */}
+      <div className={classes.imgContainer}>
+        <img src={venn} alt="venn digram" className={classes.img} />
       </div>
       <div className={classes.textContainer}>
-        <p className={clsx(classes.name, "zep-typo--display-6")}>
+        <p className={clsx(classes.name, 'zep-typo--display-6')}>
           Team Data Analytics
         </p>
-        <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
-          {t("header.what")}
+        <p className={clsx(classes.tagline, 'zep-typo--bold-h2')}>
+          {t('header.what')}
         </p>
-        <p className={clsx(classes.text, "zep-typo--normal-body1")}>
-          {t("overview.visionText")}
+        <p className={clsx(classes.text, 'zep-typo--normal-body1')}>
+          {t('overview.visionText')}
         </p>
         <List>
-          <ListItem>{t("overview.bullet1")}</ListItem>
-          <ListItem>{t("overview.bullet2")}</ListItem>
-          <ListItem>{t("overview.bullet3")}</ListItem>
+          <ListItem>{t('overview.bullet1')}</ListItem>
+          <ListItem>{t('overview.bullet2')}</ListItem>
+          <ListItem>{t('overview.bullet3')}</ListItem>
         </List>
       </div>
       <div className={classes.imgContainerXS}>
