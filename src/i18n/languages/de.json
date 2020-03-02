@@ -61,7 +61,7 @@
   "sparkplugs": {
     "type": "Use Case: ZPS",
     "title": "Sparkplugs",
-    "problem": "Wenn in einem Blockheizkraftwerk eine Zündkerze ausfällt, steht das gesamte Kraftwerk still. Dies führt zu vielen ungeplanten Serviceeinsätzen und ggf. hohen Standzeiten.",
+    "problem": "Wenn in einem Blockheizkraftwerk eine Zündkerze ausfällt, steht der gesamte Motor still. Dies führt zu vielen ungeplanten Serviceeinsätzen und ggf. hohen Standzeiten.",
     "solution": "Wir haben einen Algorithmus entwickelt, der die Ausfälle von Zündkerzen frühzeitig vorhersagen kann. Das verbessert die Disposition von Servicemitarbeitern, erleichtert die Fehlerdiagnose und führt zu geringeren Motorstandzeiten."
   }
 }
