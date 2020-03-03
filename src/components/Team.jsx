@@ -1,29 +1,29 @@
-import React from "react";
-import { createUseStyles } from "react-jss";
-import { useTranslation } from "react-i18next";
-import clsx from "clsx";
-import rene from "../assets/team/rene.png";
-import rebekka from "../assets/team/rebekka.png";
-import christoph from "../assets/team/christoph.png";
-import salvador from "../assets/team/salvador.png";
-import alyssa from "../assets/team/alyssa.png";
-import nils from "../assets/team/nils.png";
-import placeholder from "../assets/team/placeholder.png";
-import Container from "./Container";
+import React from 'react';
+import { createUseStyles } from 'react-jss';
+import { useTranslation } from 'react-i18next';
+import clsx from 'clsx';
+import rene from '../assets/team/rene.png';
+import rebekka from '../assets/team/rebekka.png';
+import christoph from '../assets/team/christoph.png';
+import salvador from '../assets/team/salvador.png';
+import alyssa from '../assets/team/alyssa.png';
+import nils from '../assets/team/nils.png';
+import placeholder from '../assets/team/placeholder.png';
+import Container from './Container';
 
 const useStyles = createUseStyles(theme => ({
   container: {
-    display: "flex",
-    alignItems: "center",
-    flexDirection: "column",
-    flexBasis: "44%",
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    flexBasis: '44%',
     marginBottom: `${theme.spacing.component.xl.rem}rem`
   },
   name: {
     color: theme.logo.digitBlue.hex
   },
   img: {
-    width: "50%"
+    width: '50%'
   },
   title: {
     padding: 10
@@ -34,7 +34,7 @@ const useStyles = createUseStyles(theme => ({
   },
   [`@media (min-width: ${theme.breakpoint.m})`]: {
     container: {
-      flexBasis: "22%"
+      flexBasis: '22%'
     }
   }
 }));
@@ -45,53 +45,53 @@ function Team({ ...props }) {
 
   const team = [
     {
-      name: "Rene Ahlgrim",
+      name: 'Rene Ahlgrim',
       img: rene,
-      title: "Team Lead"
+      title: 'Team Lead'
     },
     {
-      name: "Rebekka Sak",
+      name: 'Rebekka Sax',
       img: rebekka,
-      title: "Product Owner"
+      title: 'Product Owner'
     },
     {
-      name: "Christoph Bierarcher",
+      name: 'Christoph Biberacher',
       img: christoph,
-      title: "Product Owner"
+      title: 'Product Owner'
     },
     {
-      name: "Salvador Salazar",
+      name: 'Salvador Salazar',
       img: salvador,
-      title: "Data Scientist"
+      title: 'Data Scientist'
     },
     {
-      name: "Alyssa Butler",
+      name: 'Alyssa Butler',
       img: alyssa,
-      title: "Data Scientist"
+      title: 'Data Scientist'
     },
     {
-      name: "Nils Struma",
+      name: 'Nils Sturma',
       img: nils,
-      title: "Working Student"
+      title: 'Working Student'
     },
     {
-      name: "Jorg Kowollik",
+      name: 'Jorg Kowollik',
       img: placeholder,
-      title: "Working Student"
+      title: 'Working Student'
     },
     {
-      name: "",
+      name: '',
       img: placeholder,
-      title: ""
+      title: ''
     }
   ];
   return (
-    <Container variant="spaceBetween" title={t("header.who")}>
+    <Container variant="spaceBetween" title={t('header.who')}>
       {team.map((elem, idx) => (
         <div className={classes.container} key={`teamMember${idx}`}>
           <img src={elem.img} alt={elem.name} className={classes.img} />
 
-          <p className={clsx(classes.name, "zep-typo--display-6")}>
+          <p className={clsx(classes.name, 'zep-typo--display-6')}>
             {elem.name}
           </p>
           <p className={classes.title}>{elem.title}</p>
