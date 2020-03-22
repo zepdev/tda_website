@@ -1,12 +1,12 @@
-import React from "react";
-import { createUseStyles } from "react-jss";
-import { useTranslation } from "react-i18next";
-import clsx from "clsx";
-import build1 from "../assets/build4.png";
-import build2 from "../assets/build5.png";
-import build3 from "../assets/build6.png";
-import Container from "./Container";
-import Hidden from "@material-ui/core/Hidden";
+import React from 'react';
+import { createUseStyles } from 'react-jss';
+import { useTranslation } from 'react-i18next';
+import clsx from 'clsx';
+import build1 from '../assets/analytics.svg';
+import build3 from '../assets/fleetx.svg';
+import build2 from '../assets/usecase.svg';
+import Container from './Container';
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = createUseStyles(theme => ({
   container: {
@@ -14,30 +14,38 @@ const useStyles = createUseStyles(theme => ({
     paddingBottom: 30,
     paddingLeft: 15,
     paddingRight: 15,
-    display: "flex",
-    flexDirection: "column-reverse",
-    justifyContent: "space-between",
-    alignItems: "center"
+    display: 'flex',
+    flexDirection: 'column-reverse',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   reverse: {
-    flexDirection: "column"
+    flexDirection: 'column'
   },
   background: {
-    background: "#E5F3FF"
+    background: '#E5F3FF'
   },
   imgContainer: {
-    flexBasis: "55%",
-    height: 500,
-    overflow: "hidden",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
+    flexBasis: '50%',
+    height: 400,
+    overflow: 'hidden',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  imgReverse: {
+    width: '100%',
+    marginLeft: 30,
+    marginRight: 0
   },
   img: {
-    height: "50%"
+    width: '100%',
+    marginLeft: 0,
+    marginRight: 30
   },
   flex: {
-    flexBasis: "100%",
+    flexBasis: '100%',
+    alignSelf: 'center',
     marginBottom: `${theme.spacing.component.xl.rem}rem`
   },
   name: {
@@ -49,12 +57,16 @@ const useStyles = createUseStyles(theme => ({
     marginBottom: `${theme.spacing.component.xl.rem}rem`
   },
   hidden: {
-    display: "none"
+    display: 'none'
   },
   [`@media (min-width: ${theme.breakpoint.s})`]: {
     container: {
       paddingLeft: 60,
       paddingRight: 60
+    },
+    imgContainer: {
+      flexBasis: '40%',
+      marginBottom: 0
     }
   },
   [`@media (min-width: ${theme.breakpoint.m})`]: {
@@ -63,18 +75,17 @@ const useStyles = createUseStyles(theme => ({
       paddingBottom: 60,
       paddingLeft: 90,
       paddingRight: 90,
-      flexDirection: "row"
+      flexDirection: 'row'
     },
     imgContainer: {
-      flexBasis: "40%",
-      marginBottom: 0
+      flexBasis: '55%'
     },
     flex: {
-      flexBasis: "55%",
+      flexBasis: '45%',
       marginBottom: 0
     },
     hidden: {
-      display: "block"
+      display: 'block'
     }
   },
   [`@media (min-width: ${theme.breakpoint.l})`]: {
@@ -84,13 +95,8 @@ const useStyles = createUseStyles(theme => ({
       paddingLeft: 90,
       paddingRight: 90
     },
-    imgContainer: {
-      // flexBasis: "55%"
-      flexBasis: "40%"
-    },
     flex: {
-      // flexBasis: "40%"
-      flexBasis: "55%"
+      flexBasis: '40%'
     }
   },
   [`@media (min-width: ${theme.breakpoint.xl})`]: {
@@ -116,28 +122,28 @@ function Overview({ ...props }) {
           </div>
         </Hidden>
         <div className={classes.flex}>
-          <p className={clsx(classes.name, "zep-typo--display-6")}>
+          <p className={clsx(classes.name, 'zep-typo--display-6')}>
             Analytics+
           </p>
-          <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
-            {t("analytics.tagline")}
+          <p className={clsx(classes.tagline, 'zep-typo--bold-h2')}>
+            {t('analytics.tagline')}
           </p>
-          <p className="zep-typo--normal-body1">{t("analytics.overview")}</p>
+          <p className="zep-typo--normal-body1">{t('analytics.overview')}</p>
         </div>
       </Container>
       <Container variant="spaceBetween">
         <div className={classes.flex}>
-          <h2 className={clsx(classes.name, "zep-typo--display-6")}>
+          <h2 className={clsx(classes.name, 'zep-typo--display-6')}>
             Use Cases
           </h2>
-          <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
-            {t("usecase.tagline")}
+          <p className={clsx(classes.tagline, 'zep-typo--bold-h2')}>
+            {t('usecase.tagline')}
           </p>
-          <p className="zep-typo--normal-body1">{t("usecase.overview")}</p>
+          <p className="zep-typo--normal-body1">{t('usecase.overview')}</p>
         </div>
         <Hidden smDown>
           <div className={classes.imgContainer}>
-            <img src={build2} alt="builders 2" className={classes.img} />
+            <img src={build2} alt="builders 2" className={classes.imgReverse} />
           </div>
         </Hidden>
       </Container>
@@ -148,11 +154,11 @@ function Overview({ ...props }) {
           </div>
         </Hidden>
         <div className={classes.flex}>
-          <h2 className={clsx(classes.name, "zep-typo--display-6")}>FleetX</h2>
-          <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
-            {t("fleetx.tagline")}
+          <h2 className={clsx(classes.name, 'zep-typo--display-6')}>FleetX</h2>
+          <p className={clsx(classes.tagline, 'zep-typo--bold-h2')}>
+            {t('fleetx.tagline')}
           </p>
-          <p className="zep-typo--normal-body1">{t("fleetx.overview")}</p>
+          <p className="zep-typo--normal-body1">{t('fleetx.overview')}</p>
         </div>
       </Container>
     </>

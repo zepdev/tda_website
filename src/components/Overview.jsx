@@ -26,9 +26,10 @@ const useStyles = createUseStyles(theme => ({
     marginBottom: `${theme.spacing.component.xl.rem}rem`
   },
   imgContainerXS: {
-    flexBasis: '100%'
+    flexBasis: '100%',
+    textAlign: 'center'
   },
-  imgContainerL: {
+  imgContainer: {
     display: 'none'
   },
   name: {
@@ -49,13 +50,16 @@ const useStyles = createUseStyles(theme => ({
   xs: {
     display: 'none'
   },
-  imgContainer: {
-    textAlign: 'center'
-  },
   img: {
     width: '60%'
   },
-  [`@media (min-width: ${theme.breakpoint.l})`]: {
+  [`@media (min-width: ${theme.breakpoint.m})`]: {
+    img: {
+      width: '90%'
+    },
+    container: {
+      flexWrap: 'nowrap'
+    },
     textContainer: {
       flexBasis: '49%',
       mariginBottom: 0
@@ -63,9 +67,20 @@ const useStyles = createUseStyles(theme => ({
     imgContainerXS: {
       display: 'none'
     },
-    imgContainerL: {
+    imgContainer: {
       flexBasis: '49%',
+      textAlign: 'center',
       display: 'block'
+    }
+  },
+  [`@media (min-width: ${theme.breakpoint.l})`]: {
+    img: {
+      width: '80%'
+    }
+  },
+  [`@media (min-width: ${theme.breakpoint.xl})`]: {
+    img: {
+      width: '50%'
     }
   }
 }));
@@ -74,90 +89,8 @@ function Overview({ ...props }) {
   const classes = useStyles(props);
   const { t } = useTranslation();
 
-  const labels = [
-    'Advanced Analytics',
-    'Data Infrastructure',
-    'Road Mapping',
-    'Kickstarting',
-    'Brainstorming'
-  ];
-
-  const optionsXS = {
-    chart: {
-      id: 'apexchart-pie'
-    },
-    labels: labels,
-    dataLabels: {
-      enabled: true,
-      fontColor: '#000',
-      formatter: function(val, opts) {
-        return labels[opts.seriesIndex];
-      },
-      dropShadow: {
-        enabled: false
-      },
-      style: {
-        colors: ['#000']
-      }
-    },
-    tooltip: {
-      enabled: false
-    },
-    colors: colors,
-    legend: {
-      show: false,
-      position: 'right',
-      fontFamily: 'Roboto',
-      offsetY: 75,
-      fontSize: 16,
-      offsetX: 15,
-      markers: {
-        radius: 2
-      },
-      itemMargin: {
-        vertical: 5
-      }
-    }
-  };
-
-  const optionsL = {
-    chart: {
-      id: 'apexchart-pie'
-    },
-    labels: labels,
-    dataLabels: {
-      enabled: false
-    },
-    tooltip: {
-      enabled: false
-    },
-    colors: colors,
-    legend: {
-      show: true,
-      position: 'right',
-      fontFamily: 'Roboto',
-      offsetY: 75,
-      fontSize: 16,
-      markers: {
-        radius: 2
-      },
-      itemMargin: {
-        vertical: 5
-      }
-    }
-  };
-
   return (
     <Container variant="spaceBetween" className={classes.container}>
-      {/* <div className={classes.imgContainerL}>
-       = <Chart
-          options={optionsL}
-          series={[30, 17.5, 17.5, 17.5, 17.5]}
-          type="pie"
-          width="80%"
-          height={250}
-        /> 
-        </div> */}
       <div className={classes.imgContainer}>
         <img src={venn} alt="venn digram" className={classes.img} />
       </div>
@@ -178,13 +111,7 @@ function Overview({ ...props }) {
         </List>
       </div>
       <div className={classes.imgContainerXS}>
-        <Chart
-          options={optionsXS}
-          series={[30, 17.5, 17.5, 17.5, 17.5]}
-          type="pie"
-          width="100%"
-          height={300}
-        />
+        <img src={venn} alt="venn digram" className={classes.img} />
       </div>
     </Container>
   );

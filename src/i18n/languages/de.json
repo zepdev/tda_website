@@ -42,7 +42,9 @@
     "send": "senden",
     "name": "name",
     "email": "email",
-    "message": "nachricht"
+    "message": "nachricht",
+    "dataProtectionStatement": "Datenschutzerklärung",
+    "dataProtection": "Wir verarbeiten Ihre Daten ausschließlich zum Zwecke der Bearbeitung Ihrer Anfrage. Weitere Informationen zum Datenschutz finden Sie in unserer"
   },
   "problem": "problem",
   "solution": "Lösung",

@@ -42,7 +42,9 @@
     "send": "send",
     "name": "name",
     "email": "email",
-    "message": "message"
+    "message": "message",
+    "dataProtectionStatement": "Data Protection Statement",
+    "dataProtection": "We process your data solely for the purpose of handling your request. More information on data privacy can be found in our"
   },
   "problem": "problem",
   "solution": "solution",

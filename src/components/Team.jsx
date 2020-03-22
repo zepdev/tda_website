@@ -80,9 +80,9 @@ function Team({ ...props }) {
       title: 'Working Student'
     },
     {
-      name: '',
+      name: 'Amir Javed',
       img: placeholder,
-      title: ''
+      title: 'Data Engineer'
     }
   ];
   return (
