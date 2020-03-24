@@ -1,29 +1,19 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
+import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
-import Chart from 'react-apexcharts';
 import List from '@zlab-de/zel-react/List';
 import ListItem from '@zlab-de/zel-react/ListItem';
 import clsx from 'clsx';
 import Container from './Container';
-import guidelines from '@zlab-de/zel-react/guidelines.json';
 import venn from '../assets/venn.png';
 
-const colors = [
-  guidelines.logo.digitBlue.hex,
-  guidelines.logo.zLabCyan.hex,
-  guidelines.color.support.info.hex,
-  guidelines.color.corporate.gray.hex,
-  guidelines.color.support.infoLighter.hex
-];
-
-const useStyles = createUseStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   container: {
     alignItems: 'center'
   },
   textContainer: {
     flexBasis: '100%',
-    marginBottom: `${theme.spacing.component.xl.rem}rem`
+    marginBottom: `${theme.space.xl.rem}rem`
   },
   imgContainerXS: {
     flexBasis: '100%',
@@ -33,15 +23,15 @@ const useStyles = createUseStyles(theme => ({
     display: 'none'
   },
   name: {
-    color: theme.logo.digitBlue.hex,
-    marginBottom: `${theme.spacing.component.s.rem}rem`,
+    color: theme.blue.primary,
+    marginBottom: `${theme.space.s.rem}rem`,
     fontSize: 18
   },
   tagline: {
-    marginBottom: `${theme.spacing.component.xl.rem}rem`
+    marginBottom: `${theme.space.xl.rem}rem`
   },
   text: {
-    marginBottom: `${theme.spacing.component.m.rem}rem`
+    marginBottom: `${theme.space.m.rem}rem`
   },
   list: {
     display: 'flex',

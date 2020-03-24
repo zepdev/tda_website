@@ -1,23 +1,22 @@
-import React from "react";
-import { createUseStyles } from "react-jss";
-import clsx from "clsx";
-import ZeppelinIcon from "./icons/ZeppelinIcon";
+import React from 'react';
+import { makeStyles } from '@material-ui/styles';
+import clsx from 'clsx';
+import ZeppelinIcon from './icons/ZeppelinIcon';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   header: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    background: "transparent",
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    background: 'transparent',
     zIndex: 200,
-    padding: `${theme.spacing.component.m.rem}rem ${theme.spacing.component.xl
-      .rem * 2}rem`
+    padding: `${theme.space.m.rem}rem ${theme.space.xl.rem * 2}rem`
   },
   button: {
-    textTransform: "uppercase"
+    textTransform: 'uppercase'
   },
   logo: {
-    color: theme.color.gray.black.hex,
+    color: theme.color.global.black,
     width: 100
   },
   [`@media (min-width: ${theme.breakpoint.xs})`]: {
@@ -34,7 +33,7 @@ function Header({ handleSetLang, lang, ...props }) {
       <ZeppelinIcon className={classes.logo} />
       <button
         onClick={handleSetLang}
-        className={clsx(classes.button, "zep-typo--display-5", "zep-button")}
+        className={clsx(classes.button, 'zep-typo--display-5', 'zep-button')}
       >
         {lang}
       </button>

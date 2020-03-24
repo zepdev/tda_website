@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { createUseStyles } from "react-jss";
-import clsx from "clsx";
-import Heading from "./Heading";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/styles';
+import clsx from 'clsx';
+import Heading from './Heading';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   container: {
     paddingTop: 30,
     paddingBottom: 30,
@@ -42,38 +42,38 @@ const useStyles = createUseStyles(theme => ({
     }
   },
   secondary: {
-    background: "#E5F3FF"
+    background: '#E5F3FF'
   },
   primary: {
-    background: theme.logo.digitBlue.hex
+    background: theme.blue.primary
   },
   flexStart: {
-    display: "flex",
-    flexWrap: "wrap"
+    display: 'flex',
+    flexWrap: 'wrap'
   },
   flexEnd: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "flex-end"
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-end'
   },
   center: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center"
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center'
   },
   spaceBetween: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-between"
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between'
   },
   spaceAround: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around"
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around'
   },
   subtitle: {
-    marginBottom: `${theme.spacing.component.xl.rem}rem`,
-    textAlign: "center"
+    marginBottom: `${theme.space.xl.rem}rem`,
+    textAlign: 'center'
   }
 }));
 
@@ -90,13 +90,13 @@ function Container({
   return (
     <div
       className={clsx(classes.container, {
-        [classes.secondary]: background === "secondary",
-        [classes.primary]: background === "primary"
+        [classes.secondary]: background === 'secondary',
+        [classes.primary]: background === 'primary'
       })}
     >
       {title && <Heading>{title}</Heading>}
       {subtitle && (
-        <p className={clsx(classes.subtitle, "zep-typo--normal-body2")}>
+        <p className={clsx(classes.subtitle, 'zep-typo--normal-body2')}>
           {subtitle}
         </p>
       )}
@@ -120,13 +120,13 @@ Container.propTypes = {
     PropTypes.array,
     PropTypes.bool
   ]),
-  background: PropTypes.oneOf(["secondary", "primary", "inverse"]),
+  background: PropTypes.oneOf(['secondary', 'primary', 'inverse']),
   variant: PropTypes.oneOf([
-    "flexStart",
-    "flexEnd",
-    "center",
-    "spaceBetween",
-    "spaceAround"
+    'flexStart',
+    'flexEnd',
+    'center',
+    'spaceBetween',
+    'spaceAround'
   ])
 };
 

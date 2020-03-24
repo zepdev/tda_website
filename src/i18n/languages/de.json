@@ -23,6 +23,12 @@
     "overview": "Wir arbeiten daran, die Analytik bei Zeppelin weiter voranzutreiben. Haben Sie ein Problem, das eine digitale Lösung benötigt? Möchten Sie Ihre aktuellen Prozesse mit datengetriebenen Entscheidungen optimieren? Reichen Sie einen Anwendungsfall bei uns ein und unser Team wird daran arbeiten, eine datengetriebene Lösung bereitzustellen.",
     "tagline": "Datengetriebene Lösungen"
   },
+  "learning": {
+    "title": "Online lernen",
+    "overview": "Wir möchten Ressourcen und unsere Erkenntnisse mit Ihnen teilen! In unserem YouTube-Kanal finden Sie Videos zu Webentwicklungs- und Data Science-Tutorials.",
+    "tagline": "Lernen mit YouTube!",
+    "button": "lerne jetzt!"
+  },
   "process": {
     "name": "Machen Sie mit",
     "tagline": "Unser Prozess",

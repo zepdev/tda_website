@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createUseStyles } from 'react-jss';
+import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
 import Dialog from '@material-ui/core/Dialog';
@@ -10,36 +10,36 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@zlab-de/zel-react/Button';
 import Notification from '@zlab-de/zel-react/Notification';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   container: { textAlign: 'center', width: '100%' },
   text: {
     marginBottom: 0
   },
   button: {
-    padding: `${theme.spacing.component.xl.rem}rem`,
-    background: theme.logo.digitBlue.hex,
-    color: theme.color.gray.white.hex,
+    padding: `${theme.space.xl.rem}rem`,
+    background: theme.blue.primary,
+    color: theme.color.global.white,
     '&:hover': {
       background: '#3b89ff'
     }
   },
   form: {
-    padding: `${theme.spacing.component.l.rem}rem`
+    padding: `${theme.space.l.rem}rem`
   },
   input: {
-    marginBottom: `${theme.spacing.component.l.rem}rem`
+    marginBottom: `${theme.space.l.rem}rem`
   },
   buttonSend: {
-    background: theme.logo.digitBlue.hex
+    background: theme.blue.primary
   },
   textContainer: {
     display: 'flex',
     justifyContent: 'center'
   },
   link: {
-    color: theme.logo.digitBlue.hex,
+    color: theme.blue.primary,
     paddingLeft: 3,
-    marginBottom: `${theme.spacing.component.xl.rem}rem`
+    marginBottom: `${theme.space.xl.rem}rem`
   }
 }));
 

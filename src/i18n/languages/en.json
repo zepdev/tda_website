@@ -23,6 +23,12 @@
     "overview": "We are working to further advanced analytics at Zeppelin. Do you have a problem that needs a digital solution? Do you want to optimize your current processes using data driven decisions? Submit a use case to us and our team will work to provide a data driven solution.",
     "tagline": "Data driven solutions"
   },
+  "learning": {
+    "title": "online learning",
+    "overview": "We want to share resources and our learnings with you! Check out our YouTube channel to see videos on web development and data science tutorials.",
+    "tagline": "Learn on YouTube",
+    "button": "Learn now!"
+  },
   "process": {
     "name": "get involved",
     "tagline": "Our Process",

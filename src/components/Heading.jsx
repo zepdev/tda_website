@@ -1,18 +1,18 @@
-import React from "react";
-import { createUseStyles } from "react-jss";
-import clsx from "clsx";
+import React from 'react';
+import { makeStyles } from '@material-ui/styles';
+import clsx from 'clsx';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   header: {
-    textAlign: "center",
-    marginBottom: `${theme.spacing.component.xl.rem * 2}rem`
+    textAlign: 'center',
+    marginBottom: `${theme.space.xl.rem * 2}rem`
   }
 }));
 
 function Heading({ children, ...props }) {
   const classes = useStyles(props);
   return (
-    <h2 className={clsx(classes.header, "zep-typo--display-4")}>{children}</h2>
+    <h2 className={clsx(classes.header, 'zep-typo--display-4')}>{children}</h2>
   );
 }
 

@@ -1,21 +1,21 @@
-import React from "react";
-import { createUseStyles } from "react-jss";
-import clsx from "clsx";
+import React from 'react';
+import { makeStyles } from '@material-ui/styles';
+import clsx from 'clsx';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   footer: {
-    textAlign: "center",
+    textAlign: 'center',
     flexShrink: 0,
-    color: theme.color.gray.white.hex,
-    background: theme.logo.digitBlue.hex,
-    padding: `${theme.spacing.component.s.rem}rem`
+    color: theme.color.global.white,
+    background: theme.blue.primary,
+    padding: `${theme.space.s.rem}rem`
   }
 }));
 
 function Footer({ ...props }) {
   const classes = useStyles(props);
   return (
-    <footer className={clsx(classes.footer, "zep-typo--normal-body1")}>
+    <footer className={clsx(classes.footer, 'zep-typo--normal-body1')}>
       <p>&copy; Zeppelin</p>
     </footer>
   );

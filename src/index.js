@@ -1,18 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import { ThemeProvider } from "react-jss";
-import guidelines from "@zlab-de/zel-react/guidelines.json";
-import * as serviceWorker from "./serviceWorker";
-import "@zlab-de/zel-react/zel.css";
-import "./index.css";
-import "./i18n/i18n";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './theme';
+import * as serviceWorker from './serviceWorker';
+import './i18n/i18n';
 
 ReactDOM.render(
-  <ThemeProvider theme={guidelines}>
+  <ThemeProvider theme={theme}>
     <App />
   </ThemeProvider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

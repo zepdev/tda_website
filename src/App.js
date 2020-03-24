@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { createUseStyles } from 'react-jss';
+import { makeStyles } from '@material-ui/styles';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Content from './components/Content';
@@ -11,11 +11,11 @@ import ArrowDown from './components/icons/ArrowDown';
 import IconButton from '@zlab-de/zel-react/IconButton';
 import clsx from 'clsx';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    background: theme.color.gray.white.hex,
+    background: theme.color.global.white,
     minHeight: '100%'
   },
   body: {
@@ -56,25 +56,25 @@ const useStyles = createUseStyles(theme => ({
     position: 'absolute',
     bottom: 0,
     right: 0,
-    marginRight: `${theme.spacing.component.xl.rem * 2}rem`,
-    marginBottom: `${theme.spacing.component.xl.rem}rem`
+    marginRight: `${theme.space.xl.rem * 2}rem`,
+    marginBottom: `${theme.space.xl.rem}rem`
   },
   iconButtonUp: {
     position: 'fixed',
     bottom: 0,
     right: 0,
-    marginRight: `${theme.spacing.component.xl.rem * 2}rem`,
-    marginBottom: `${theme.spacing.component.xl.rem * 2}rem`
+    marginRight: `${theme.space.xl.rem * 2}rem`,
+    marginBottom: `${theme.space.xl.rem * 2}rem`
   },
   hidden: {
     display: 'none'
   },
   icon: {
-    color: theme.color.gray.black.hex,
+    color: theme.color.global.black,
     width: 42,
     height: 42,
     '&:hover': {
-      color: theme.logo.digitBlue.hex
+      color: theme.blue.primary
     }
   },
   iconUp: {
@@ -119,7 +119,7 @@ const useHideOnScroll = () => {
 
 function App() {
   const classes = useStyles();
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
   const [lang, setLang] = useState('en');
   const isHidden = useHideOnScroll();
 
@@ -130,7 +130,7 @@ function App() {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={clsx('theme-blue', classes.root)}>
       <Header lang={lang} handleSetLang={handleSetLang} />
       <div className={classes.top}>
         <img

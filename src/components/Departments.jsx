@@ -1,14 +1,15 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
+import { makeStyles } from '@material-ui/styles';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
 import build1 from '../assets/analytics.svg';
 import build3 from '../assets/fleetx.svg';
 import build2 from '../assets/usecase.svg';
+import build4 from '../assets/learn.svg';
 import Container from './Container';
 import Hidden from '@material-ui/core/Hidden';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   container: {
     paddingTop: 30,
     paddingBottom: 30,
@@ -46,15 +47,15 @@ const useStyles = createUseStyles(theme => ({
   flex: {
     flexBasis: '100%',
     alignSelf: 'center',
-    marginBottom: `${theme.spacing.component.xl.rem}rem`
+    marginBottom: `${theme.space.xl.rem}rem`
   },
   name: {
-    color: theme.logo.digitBlue.hex,
-    marginBottom: `${theme.spacing.component.s.rem}rem`,
+    color: theme.blue.primary,
+    marginBottom: `${theme.space.s.rem}rem`,
     fontSize: 18
   },
   tagline: {
-    marginBottom: `${theme.spacing.component.xl.rem}rem`
+    marginBottom: `${theme.space.xl.rem}rem`
   },
   hidden: {
     display: 'none'
@@ -106,6 +107,9 @@ const useStyles = createUseStyles(theme => ({
       paddingLeft: 90,
       paddingRight: 90
     }
+  },
+  button: {
+    marginTop: 30
   }
 }));
 
@@ -115,6 +119,30 @@ function Overview({ ...props }) {
 
   return (
     <>
+      <Container variant="spaceBetween">
+        <div className={classes.flex}>
+          <h2 className={clsx(classes.name, 'zep-typo--display-6')}>
+            {t('learning.title')}
+          </h2>
+          <p className={clsx(classes.tagline, 'zep-typo--bold-h2')}>
+            {t('learning.tagline')}
+          </p>
+          <p className="zep-typo--normal-body1">{t('learning.overview')}</p>
+          <a
+            href="https://www.youtube.com/channel/UC2u2sfQd55nIyrG_9nDP_bg?disable_polymer=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={clsx('zep-button zep-button-primary', classes.button)}
+          >
+            {t('learning.button')}
+          </a>
+        </div>
+        <Hidden smDown>
+          <div className={classes.imgContainer}>
+            <img src={build4} alt="builders 4" className={classes.imgReverse} />
+          </div>
+        </Hidden>
+      </Container>
       <Container variant="spaceBetween">
         <Hidden smDown>
           <div className={classes.imgContainer}>

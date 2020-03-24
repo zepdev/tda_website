@@ -1,5 +1,5 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
+import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
 import rene from '../assets/team/rene.png';
@@ -11,16 +11,16 @@ import nils from '../assets/team/nils.png';
 import placeholder from '../assets/team/placeholder.png';
 import Container from './Container';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   container: {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
     flexBasis: '44%',
-    marginBottom: `${theme.spacing.component.xl.rem}rem`
+    marginBottom: `${theme.space.xl.rem}rem`
   },
   name: {
-    color: theme.logo.digitBlue.hex
+    color: theme.blue.primary
   },
   img: {
     width: '50%'
@@ -29,7 +29,7 @@ const useStyles = createUseStyles(theme => ({
     padding: 10
   },
   icon: {
-    color: theme.logo.digitBlue.hex,
+    color: theme.blue.primary,
     height: 18
   },
   [`@media (min-width: ${theme.breakpoint.m})`]: {

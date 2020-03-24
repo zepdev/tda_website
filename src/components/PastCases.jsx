@@ -1,37 +1,37 @@
 import React, { useState } from 'react';
-import { createUseStyles } from 'react-jss';
+import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
 import Container from './Container';
 import Tabs from '@zlab-de/zel-react/Tabs';
 import Tab from '@zlab-de/zel-react/Tab';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   name: {
-    color: theme.logo.digitBlue.hex,
-    marginBottom: `${theme.spacing.component.s.rem}rem`,
+    color: theme.blue.primary,
+    marginBottom: `${theme.space.s.rem}rem`,
     fontSize: 18
   },
   tagline: {
-    marginBottom: `${theme.spacing.component.xl.rem}rem`
+    marginBottom: `${theme.space.xl.rem}rem`
   },
   bold: {
     fontWeight: 'bold',
     textTransform: 'uppercase',
-    marginBottom: `${theme.spacing.component.s.rem}rem`
+    marginBottom: `${theme.space.s.rem}rem`
   },
   margin: {
-    marginBottom: `${theme.spacing.component.s.rem}rem`
+    marginBottom: `${theme.space.s.rem}rem`
   },
   tab: {
-    '&:hover': { borderBottomColor: theme.logo.digitBlue.hex }
+    '&:hover': { borderBottomColor: theme.blue.primary }
   },
   tabSelected: {
-    borderBottomColor: theme.logo.digitBlue.hex
+    borderBottomColor: theme.blue.primary
   },
   paper: {
-    padding: `${theme.spacing.component.xl.rem * 2}rem`,
-    background: theme.color.gray.white.hex
+    padding: `${theme.space.xl.rem * 2}rem`,
+    background: theme.color.global.white
   }
 }));
 

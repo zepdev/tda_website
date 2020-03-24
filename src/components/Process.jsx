@@ -1,22 +1,22 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
+import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
 import Container from './Container';
 import Contact from './Contact';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   flex: {
     flexBasis: '100%',
-    marginBottom: `${theme.spacing.component.xl.rem}rem`
+    marginBottom: `${theme.space.xl.rem}rem`
   },
   name: {
-    color: theme.logo.digitBlue.hex,
-    marginBottom: `${theme.spacing.component.s.rem}rem`,
+    color: theme.blue.primary,
+    marginBottom: `${theme.space.s.rem}rem`,
     fontSize: 18
   },
   tagline: {
-    marginBottom: `${theme.spacing.component.xl.rem}rem`
+    marginBottom: `${theme.space.xl.rem}rem`
   },
   stepsContainer: {
     flexBasis: '100%',
@@ -25,7 +25,7 @@ const useStyles = createUseStyles(theme => ({
   },
   stepsItem: {
     flexBasis: '49%',
-    marginBottom: `${theme.spacing.component.xl.rem * 2}rem`
+    marginBottom: `${theme.space.xl.rem * 2}rem`
   },
   stepsText: {
     paddingRight: 10,
@@ -34,17 +34,17 @@ const useStyles = createUseStyles(theme => ({
   numberContainer: {
     display: 'flex',
     alignItems: 'center',
-    marginBottom: `${theme.spacing.component.s.rem}rem`
+    marginBottom: `${theme.space.s.rem}rem`
   },
   number: {
-    background: theme.logo.digitBlue.hex,
-    color: theme.color.gray.white.hex,
+    background: theme.blue.primary,
+    color: theme.color.global.white,
     width: 30,
     height: 30,
     padding: 7,
     textAlign: 'center',
     borderRadius: '50%',
-    marginRight: `${theme.spacing.component.m.rem}rem`
+    marginRight: `${theme.space.m.rem}rem`
   },
   [`@media (min-width: ${theme.breakpoint.m})`]: {
     flex: {
