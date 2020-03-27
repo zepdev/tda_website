@@ -1,11 +1,11 @@
 {
-  "name": "zdigit",
+  "name": "tda",
   "private": true,
-  "description": "A team website for Zeppelin Digit for IT, Digitalization & Innovation",
+  "description": "A team website for Team Data Analytics, Zeppelin Digit for IT, Digitalization & Innovation",
   "version": "0.1.0",
   "author": "Alyssa Butler <alyssa.butler@zeppelin.com>",
   "bugs": {
-    "url": "https://github.com/zeppelin-tda/zdigit/issues"
+    "url": "https://github.com/zeppelin-tda/team_website/issues"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.7",
@@ -18,6 +18,7 @@
     "gatsby-image": "^2.2.45",
     "gatsby-plugin-feed-mdx": "^1.0.1",
     "gatsby-plugin-google-analytics": "^2.1.38",
+    "gatsby-plugin-google-tagmanager": "^2.2.1",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-material-ui": "^2.1.6",
