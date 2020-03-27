@@ -1,11 +1,11 @@
 {
-  "name": "zdigit",
+  "name": "team-data-analytics",
   "private": true,
-  "description": "A team website for Zeppelin Digit for IT, Digitalization & Innovation",
+  "description": "A team website for Team Data Analytics, Zeppelin Digit for IT, Digitalization & Innovation",
   "version": "0.1.0",
   "author": "Alyssa Butler <alyssa.butler@zeppelin.com>",
   "bugs": {
-    "url": "https://github.com/zeppelin-tda/zdigit/issues"
+    "url": "https://github.com/zeppelin-tda/team_website/issues"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.7",
@@ -43,7 +43,7 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "homepage": "https://zdigit.com",
+  "homepage": "https://www.tda.zepdev.net/",
   "keywords": [
     "zeppelin",
     "zdigit"
