@@ -71,5 +71,8 @@
     "title": "Sparkplugs",
     "problem": "If a spark plug fails in a combined heat and power plant, the entire engine stops. This leads to many unplanned service calls and possibly long downtimes.",
     "solution": "We have developed an algorithm that can predict spark plug failures early. This improves the scheduling of service employees, simplifies fault diagnosis and leads to shorter engine downtimes."
-  }
+  },
+  "legal": "legal",
+  "imprint": "imprint",
+  "data": "data privacy"
 }

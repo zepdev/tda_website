@@ -1,61 +1,66 @@
 {
-  "name": "team-data-analytics",
-  "version": "1.0.0",
+  "name": "zdigit",
   "private": true,
+  "description": "A team website for Zeppelin Digit for IT, Digitalization & Innovation",
+  "version": "0.1.0",
+  "author": "Alyssa Butler <alyssa.butler@zeppelin.com>",
+  "bugs": {
+    "url": "https://github.com/zeppelin-tda/zdigit/issues"
+  },
   "dependencies": {
     "@material-ui/core": "^4.9.7",
-    "@zlab-de/zel-react": "^1.0.25",
+    "@mdx-js/mdx": "^1.5.7",
+    "@mdx-js/react": "^1.5.7",
+    "@zlab-de/zel-react": "^1.0.23",
     "@zlab-de/zel-react-icons": "^0.1.2",
     "clsx": "^1.1.0",
-    "i18next": "^19.3.1",
-    "i18next-browser-languagedetector": "^4.0.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "gatsby": "^2.19.49",
+    "gatsby-image": "^2.2.45",
+    "gatsby-plugin-feed-mdx": "^1.0.1",
+    "gatsby-plugin-google-analytics": "^2.1.38",
+    "gatsby-plugin-i18n": "^1.0.1",
+    "gatsby-plugin-manifest": "^2.2.48",
+    "gatsby-plugin-material-ui": "^2.1.6",
+    "gatsby-plugin-mdx": "^1.0.84",
+    "gatsby-plugin-offline": "^3.0.42",
+    "gatsby-plugin-react-helmet": "^3.1.24",
+    "gatsby-plugin-sharp": "^2.4.13",
+    "gatsby-remark-copy-linked-files": "^2.1.40",
+    "gatsby-remark-images": "^3.1.50",
+    "gatsby-remark-responsive-iframe": "^2.2.34",
+    "gatsby-source-filesystem": "^2.1.57",
+    "gatsby-transformer-remark": "^2.6.59",
+    "gatsby-transformer-sharp": "^2.3.19",
+    "i18next": "^19.3.3",
+    "i18next-browser-languagedetector": "^4.0.2",
+    "react": "^16.13.0",
+    "react-cookie-consent": "^3.0.0",
+    "react-dom": "^16.13.0",
+    "react-helmet": "^5.2.1",
     "react-i18next": "^11.3.3",
-    "react-scripts": "^3.4.0",
     "react-scroll": "^1.7.16"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!<rootDir>/node_modules/",
-      "!<rootDir>/path/to/dir/"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.0.2",
-    "@testing-library/react": "^9.4.0",
-    "husky": "^4.2.1",
-    "lint-staged": "^10.0.7",
     "prettier": "^1.19.1"
+  },
+  "homepage": "https://zdigit.com",
+  "keywords": [
+    "zeppelin",
+    "zdigit"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeppelin-tda/zdigit.git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
 }

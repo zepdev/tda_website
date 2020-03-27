@@ -1,26 +1,28 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import guidelines from '@zlab-de/zel-react/guidelines.json';
-import '@zlab-de/zel-react/zel.css';
-import './index.css';
+import { createMuiTheme } from "@material-ui/core/styles"
+import guidelines from "@zlab-de/zel-react/guidelines.json"
+import "@zlab-de/zel-react/zel.css"
 
 const theme = createMuiTheme({
   palette: {
-    type: 'light',
+    type: "light",
     primary: {
       light: guidelines.theme.blue.secondary,
       main: guidelines.theme.blue.primary,
-      dark: guidelines.theme.blue.primary
+      dark: guidelines.theme.blue.primary,
     },
-    error: { main: guidelines.color.support.alert }
+    error: { main: guidelines.color.support.alert },
   },
   status: {
-    gray: '#eceeef'
+    gray: "#eceeef",
   },
-  blue: guidelines.theme.blue,
   logo: guidelines.logo,
-  color: guidelines.color,
+  blue: guidelines.theme.blue,
+  indigo: guidelines.theme.indigo,
+  red: guidelines.theme.red,
+  yellow: guidelines.theme.yellow,
+  guidelines: guidelines,
   space: guidelines.spacing.component,
-  breakpoint: guidelines.breakpoint
-});
+  color: guidelines.color,
+})
 
-export default theme;
+export default theme
