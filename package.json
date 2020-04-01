@@ -1,5 +1,5 @@
 {
-  "name": "tda",
+  "name": "team-data-analytics",
   "private": true,
   "description": "A team website for Team Data Analytics, Zeppelin Digit for IT, Digitalization & Innovation",
   "version": "0.1.0",
@@ -43,7 +43,7 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "homepage": "https://zdigit.com",
+  "homepage": "https://www.tda.zepdev.net/",
   "keywords": [
     "zeppelin",
     "zdigit"
