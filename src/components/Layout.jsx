@@ -135,6 +135,13 @@ const Layout = ({ location, children }) => {
     setLang(language)
   }
 
+  const handleOptOut = () => {
+    const disableStr = "GTM-optout"
+    document.cookie =
+      disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/"
+    window[disableStr] = true
+  }
+
   return (
     <div className={clsx(classes.root, "theme-blue")}>
       <Header lang={lang} handleSetLang={handleSetLang} />
@@ -172,8 +179,19 @@ const Layout = ({ location, children }) => {
       </div>
       <CookieConsent
         location="bottom"
+        enableDeclineButton
+        onDecline={() => handleOptOut()}
+        declineButtonText="decline"
+        setDeclineCookie
+        declineButtonStyle={{
+          color: "#0066FF",
+          fontSize: "14px",
+          textTransform: "uppercase",
+          background: "transparent",
+          letterSpacing: 1.5,
+        }}
         buttonText="Accept"
-        cookieName="gdpr_ga_consent"
+        cookieName="gatsby-gdpr-google-analytics"
         style={{ background: "#C4DCFF", color: "#000" }}
         buttonStyle={{
           background: "#0066FF",
