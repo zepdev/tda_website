@@ -156,9 +156,10 @@ const Layout = ({ location, children }) => {
         </div>
         <Link to="section1" smooth={true} offset={0} duration={1000}>
           <IconButton
+            aria-label="scroll down"
             className={clsx(classes.iconButton, classes.iconButtonDown)}
           >
-            <ArrowDown alt="arrow down" className={classes.icon} />
+            <ArrowDown ariaLabel="arrow down" className={classes.icon} />
           </IconButton>
         </Link>
       </div>
@@ -166,13 +167,14 @@ const Layout = ({ location, children }) => {
         <Element name="section1"></Element>
         <main>{children}</main>
         <IconButton
+          aria-label="scroll up"
           className={clsx(classes.iconButton, classes.iconButtonUp, {
             [classes.hidden]: isHidden,
           })}
           onClick={() => scroll.scrollToTop({ duration: 1500, smooth: true })}
         >
           <ArrowDown
-            alt="arrow down"
+            ariaLabel="arrow up"
             className={clsx(classes.icon, classes.iconUp)}
           />
         </IconButton>
