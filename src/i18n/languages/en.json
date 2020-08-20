@@ -1,13 +1,14 @@
 {
   "overview": {
     "vision": "vision",
-    "visionText": "Do you have a problem that you think should have a digital solution? Our team can help! We can help you build mathematical models and help you transform your data into something useful whether that is an app, a dashboard, or a web product. We will work with you in house to provide Proof of Concepts and MVPs and after that we provide support.",
-    "bullet1": "Project Owners guide you through the process of working with us",
-    "bullet2": "Data Scientists and Engineers help support, teach and develop",
-    "bullet3": "Work with us in 3 ways; Analytics+, Use Cases, FleetX"
+    "visionText": "Data analytics focuses on digital and data-driven business models. We can help you transform your data into something useful whether that is an app, a dashboard, or a web product. Fill out the 'Magic Triangle' to determine if you have a successful business case!",
+    "who": "Who: is our customer? ",
+    "what": "What: do we deliver to our customer?",
+    "why": "Why: is this financially viable?",
+    "how": "How: is the offering created?"
   },
   "header": {
-    "what": "What can we do for you",
+    "what": "Data Driven, Digital Solutions",
     "how": "Work With Us",
     "who": "who we are"
   },
@@ -33,6 +34,9 @@
     "name": "get involved",
     "tagline": "Our Process",
     "text": "If you have data and a problem that you think needs a data driven solution, work with us! No matter which domain your project fits under (FleetX, Analytics+, or a Use Case), the process of working with us is similar and we will work together with you every step of the way.",
+    "bullet1": "Project Owners guide you through the process of working with us",
+    "bullet2": "Data Scientists and Engineers help support, teach and develop",
+    "bulletHeader": "We Offer",
     "setup": "setup",
     "pilot": "pilot",
     "prototype": "prototype",

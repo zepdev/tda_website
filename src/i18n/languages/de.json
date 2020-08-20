@@ -1,13 +1,14 @@
 {
   "overview": {
     "vision": "vision",
-    "visionText": "Haben Sie ein Problem, das Ihrer Meinung nach digital gelöst werden sollte? Unser Team kann helfen! Wir können Ihnen helfen, mathematische Modelle zu erstellen und Ihre Daten in nützliche Informationen zu verwandeln, egal ob es sich um eine App, ein Dashboard oder ein Webprodukt handelt. Wir werden mit Ihnen vor Ort zusammenarbeiten, um Proof of Concepts und MVPs bereitzustellen, und anschließend unterstützen wir Sie.",
-    "bullet1": "Projektverantwortliche führen Sie durch den Prozess der Zusammenarbeit mit uns",
-    "bullet2": "Data Scientists und Engineers Helfen Sie dabei, zu unterstützen, zu lehren und sich zu entwickeln",
-    "bullet3": "Arbeiten Sie mit uns auf drei Arten; Analytics+, Use Cases, FleetX"
+    "visionText": "Die Datenanalyse konzentriert sich auf digitale und datengesteuerte Geschäftsmodelle. Wir können Ihnen helfen, Ihre Daten in etwas Nützliches umzuwandeln, egal ob es sich um eine App, ein Dashboard oder ein Webprodukt handelt. Füllen Sie das 'Magische Dreieck' aus, um festzustellen, ob Sie einen erfolgreichen Business Case haben!",
+    "who": "Wer: ist unser Kunde? ",
+    "what": "Was: liefern wir an unsere Kunden?",
+    "why": "Warum: ist das finanziell tragfähig?",
+    "how": "Wie: wird das Angebot erstellt?"
   },
   "header": {
-    "what": "Was können wir für dich tun",
+    "what": "Datengesteuerte, digitale Lösungen",
     "how": "Arbeite Mit Uns",
     "who": "Wer Wir Sind"
   },
@@ -33,6 +34,9 @@
     "name": "Machen Sie mit",
     "tagline": "Unser Prozess",
     "text": "Wenn Sie Daten haben und ein Problem haben, das Ihrer Meinung nach eine datengetriebene Lösung erfordert, arbeiten Sie mit uns zusammen! Unabhängig davon, unter welche Domain Ihr Projekt passt (FleetX, Analytics + oder ein Anwendungsfall), ist der Prozess der Zusammenarbeit mit uns ähnlich und wir werden bei jedem Schritt des Weges mit Ihnen zusammenarbeiten.",
+    "bullet1": "Projektverantwortliche führen Sie durch den Prozess der Zusammenarbeit mit uns",
+    "bullet2": "Data Scientists und Engineers Helfen Sie dabei, zu unterstützen, zu lehren und sich zu entwickeln",
+    "bulletHeader": "Wir bieten",
     "setup": "Generierung",
     "pilot": "Pilotierung",
     "prototype": "Prototyp",

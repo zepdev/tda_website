@@ -1,6 +1,8 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import { useTranslation } from "react-i18next"
+import List from "@zlab-de/zel-react/List"
+import ListItem from "@zlab-de/zel-react/ListItem"
 import clsx from "clsx"
 import Container from "./Container"
 import Contact from "./Contact"
@@ -53,6 +55,12 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "50%",
     marginRight: `${theme.space.m.rem}rem`,
   },
+  text: {
+    paddingBottom: 15,
+  },
+  list: {
+    paddingBottom: 30,
+  },
 }))
 
 function Process({ ...props }) {
@@ -75,13 +83,17 @@ function Process({ ...props }) {
         <p className={clsx(classes.name, "zep-typo--display-6")}>
           {t("process.name")}
         </p>
-
         <p className={clsx(classes.tagline, "zep-typo--bold-h2")}>
           {t("process.tagline")}
         </p>
         <p className={clsx(classes.text, "zep-typo--normal-body1")}>
           {t("process.text")}
         </p>
+        <p className={"zep-typo--normal-body1"}>{t("process.bulletHeader")};</p>
+        <List className={classes.list}>
+          <ListItem>{t("process.bullet1")}</ListItem>
+          <ListItem>{t("process.bullet2")}</ListItem>
+        </List>
       </div>
       <div className={classes.stepsContainer}>
         {steps.map((elem, idx) => (

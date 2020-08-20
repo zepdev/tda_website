@@ -1,11 +1,12 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
-import { useTranslation } from "react-i18next"
 import List from "@zlab-de/zel-react/List"
 import ListItem from "@zlab-de/zel-react/ListItem"
+import { useTranslation } from "react-i18next"
 import clsx from "clsx"
 import Container from "./Container"
-import venn from "../assets/venn.png"
+import magicTriangleDe from "../assets/magicTriangleDe.png"
+import magicTriangleEn from "../assets/magicTriangleEn.png"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -56,27 +57,22 @@ const useStyles = makeStyles(theme => ({
     display: "none",
   },
   img: {
-    width: "60%",
-    [theme.breakpoints.up("md")]: {
-      width: "90%",
-    },
-    [theme.breakpoints.up("lg")]: {
-      width: "80%",
-    },
-    [theme.breakpoints.up("xl")]: {
-      width: "50%",
-    },
+    width: "90%",
   },
 }))
 
 function Overview({ ...props }) {
   const classes = useStyles(props)
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   return (
     <Container variant="spaceBetween" className={classes.container}>
       <div className={classes.imgContainer}>
-        <img src={venn} alt="venn digram" className={classes.img} />
+        <img
+          src={i18n.language === "de" ? magicTriangleDe : magicTriangleEn}
+          alt="magic triangle"
+          className={classes.img}
+        />
       </div>
       <div className={classes.textContainer}>
         <p className={clsx(classes.name, "zep-typo--display-6")}>
@@ -89,13 +85,18 @@ function Overview({ ...props }) {
           {t("overview.visionText")}
         </p>
         <List>
-          <ListItem>{t("overview.bullet1")}</ListItem>
-          <ListItem>{t("overview.bullet2")}</ListItem>
-          <ListItem>{t("overview.bullet3")}</ListItem>
+          <ListItem>{t("overview.who")}</ListItem>
+          <ListItem>{t("overview.what")}</ListItem>
+          <ListItem>{t("overview.why")}</ListItem>
+          <ListItem>{t("overview.how")}</ListItem>
         </List>
       </div>
       <div className={classes.imgContainerXS}>
-        <img src={venn} alt="venn digram" className={classes.img} />
+        <img
+          src={i18n.language === "de" ? magicTriangleDe : magicTriangleEn}
+          alt="magic triangle"
+          className={classes.img}
+        />
       </div>
     </Container>
   )
