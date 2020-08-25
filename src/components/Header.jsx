@@ -44,6 +44,7 @@ function Header({ handleSetLang, lang, ...props }) {
     <header className={classes.header}>
       <ZeppelinIcon className={classes.logo} />
       <IconButton
+        aria-label="change language"
         aria-controls="simple-menu"
         aria-haspopup="true"
         onClick={handleClick}

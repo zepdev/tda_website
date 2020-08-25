@@ -10,6 +10,7 @@ const ArrowDownIcon = ({ className, fill, title, ariaLabel }) => {
       viewBox="0 0 47 47"
       xmlns="http://www.w3.org/2000/svg"
       aria-labelledby={`title_${label}`}
+      aria-label={label}
       className={className}
     >
       <title id={`title_${label}`}>{label}</title>
