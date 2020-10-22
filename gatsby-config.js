@@ -89,8 +89,7 @@ module.exports = {
         icon: `src/assets/logo.png`,
       },
     },
-    "gatsby-plugin-top-layout",
-    "gatsby-plugin-material-ui",
+    "gatsby-theme-material-ui",
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

@@ -2,7 +2,7 @@ import React from "react"
 import { makeStyles } from "@material-ui/styles"
 import { useTranslation } from "react-i18next"
 import clsx from "clsx"
-import Link from "./Link"
+import { Link } from "gatsby-theme-material-ui"
 
 const useStyles = makeStyles(theme => ({
   footer: {
