@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `ZDitgit`,
-    description: `A team website for Zeppelin Digit for IT, Digitalization & Innovation.`,
-    siteUrl: `https://zdigit.com`,
+    title: `DataAnalytics`,
+    description: `A team website for Team Data Analytics of Zeppelin Digit for IT, Digitalization & Innovation.`,
+    siteUrl: `https://tda.zepdev.net/`,
   },
   plugins: [
     {

@@ -5,7 +5,7 @@ import clsx from "clsx"
 import rene from "../assets/team/rene.png"
 import rebekka from "../assets/team/rebekka.png"
 import christoph from "../assets/team/christoph.png"
-import salvador from "../assets/team/salvador.png"
+import thilip from "../assets/team/thilip.jpg"
 import alyssa from "../assets/team/alyssa.png"
 import nils from "../assets/team/nils.png"
 import placeholder from "../assets/team/placeholder.png"
@@ -58,8 +58,13 @@ function Team({ ...props }) {
       title: "Product Owner",
     },
     {
-      name: "Salvador Salazar",
-      img: salvador,
+      name: "Thilip Sivakumaran",
+      img: thilip,
+      title: "Data Scientist",
+    },
+    {
+      name: "Max Zipfel",
+      img: placeholder,
       title: "Data Scientist",
     },
     {
@@ -68,19 +73,14 @@ function Team({ ...props }) {
       title: "Data Scientist",
     },
     {
-      name: "Nils Sturma",
-      img: nils,
-      title: "Working Student",
-    },
-    {
-      name: "Jorg Kowollik",
-      img: placeholder,
-      title: "Working Student",
-    },
-    {
       name: "Amir Javed",
       img: placeholder,
       title: "Data Engineer",
+    },
+    {
+      name: "Nils Sturma",
+      img: nils,
+      title: "Working Student",
     },
   ]
   return (
